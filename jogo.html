@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse</title>
+    <link rel="stylesheet" href="jogo.css">
+</head>
+
+<body>
+    <div id="cover">
+        <h1>Apocalipse</h1>
+    </div>
+
+    <div id="main">
+        <div id="buttons">
+            <button onclick="startGame()">Iniciar</button>
+            <button onclick="showCredits()">Créditos</button>
+        </div>
+    </div>
+
+    <div id="credits">
+        <h2>Créditos</h2>
+        <p>Desenvolvedor: Augusto Matheus, Miguell, Vinicius, Davi, Nycolas, Barberato, Gata</p>
+        <button onclick="goBack()">Voltar</button>
+    </div>
+
+
+    <div id="game">
+        <video id="meuVideo" autoplay width="1550">
+            <source src="video1.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+    </div>
+
+    <div id="choices">
+        <h2>Escolha sua ação:</h2>
+        <div id="textBeforeChoices">Procurando a saída desse hospital abandonado, você vaga por alguns minutos pelos
+            corredores desertos até encontrar uma porta entreaberta...</div>
+        <div id="descriptionText">Você precisa decidir se vai sair ou ficar.</div>
+        <div class="choice-buttons">
+            <button id="leaveButton" onclick="chooseLeave()">Sair</button>
+            <button id="stayButton" onclick="chooseStay()">Ficar</button>
+        </div>
+    </div>
+
+
+    <div id="syringeFoundScene" class="hidden-flex">
+        <h2>Você encontrou uma seringa!</h2>
+        <img src="image.png" alt="Seringa" style="max-width: 1000px;">
+        <p>A seringa está em suas mãos. Você pode agora seguir em frente.</p>
+        <button onclick="exitHospital(true)">Sair do hospital</button>
+    </div>
+    
+    
+    <div id="mundoAberto">
+        <video id="videoLeave" width="1550" autoplay>
+            <source src="video3.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
